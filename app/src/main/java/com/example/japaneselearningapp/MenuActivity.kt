@@ -18,5 +18,9 @@ class MenuActivity : AppCompatActivity() {
         findViewById<Button>(R.id.wordsButton).setOnClickListener {
             startActivity(Intent(this, WordsActivity::class.java))
         }
+
+        findViewById<Button>(R.id.bookmarksButton).setOnClickListener {
+            startActivity(Intent(this, BookmarksActivity::class.java))
+        }
     }
 }

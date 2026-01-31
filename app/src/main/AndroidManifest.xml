@@ -10,27 +10,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JapaneseLearningApp">
 
+        <!-- Активность входа (LoginActivity) запускается первой -->
         <activity
-            android:name=".AlphabetActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".WordsActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".MenuActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
+        <!-- Активности приложения -->
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".MenuActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".AlphabetActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".WordsActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".BookmarksActivity"
+            android:exported="true"/>
     </application>
-
 </manifest>
