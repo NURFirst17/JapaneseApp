@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             welcomeTextView.text = "Здравствуйте, Гость"
         }
-
+        startActivity(Intent(this, GrammarActivity::class.java))
         // Переход в MenuActivity
         startButton.setOnClickListener {
             startActivity(Intent(this, MenuActivity::class.java))

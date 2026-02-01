@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JapaneseLearningApp">
+        <activity
+            android:name=".GrammarDetailActivity"
+            android:exported="true"/>
+
 
         <!-- Активность входа (LoginActivity) запускается первой -->
         <activity
@@ -19,6 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".FlashcardsActivity" android:exported="true"/>
+        <activity android:name=".FlashcardDetailActivity" android:exported="true"/>
 
         <!-- Активности приложения -->
         <activity
@@ -38,6 +45,12 @@
             android:exported="true"/>
         <activity
             android:name=".BookmarksActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".SentenceActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".GrammarActivity"
             android:exported="true"/>
     </application>
 </manifest>

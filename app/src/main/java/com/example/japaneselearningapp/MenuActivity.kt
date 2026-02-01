@@ -19,6 +19,18 @@ class MenuActivity : AppCompatActivity() {
             startActivity(Intent(this, WordsActivity::class.java))
         }
 
+        findViewById<Button>(R.id.grammarButton).setOnClickListener {
+            startActivity(Intent(this, GrammarActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.flashcardsButton).setOnClickListener {
+            startActivity(Intent(this, FlashcardsActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.sentencesButton).setOnClickListener {
+            startActivity(Intent(this, SentenceActivity::class.java))
+        }
+
         findViewById<Button>(R.id.bookmarksButton).setOnClickListener {
             startActivity(Intent(this, BookmarksActivity::class.java))
         }
