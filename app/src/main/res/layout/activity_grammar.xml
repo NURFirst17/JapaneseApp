@@ -1,12 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFF8E1">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/grammarRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="Список грамматических тем"/>
-</LinearLayout>
+    <!-- Заголовок грамматики -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Грамматика"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#3E2723"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Индикатор "1 / 10" -->
+    <TextView
+        android:id="@+id/counterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 / 10"
+        android:textSize="14sp"
+        android:textColor="#5D4037"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Описание грамматики с прокруткой -->
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Описание правила"
+        android:textSize="18sp"
+        android:textColor="#4E342E"
+        android:lineSpacingExtra="6dp"
+        android:scrollbars="vertical"
+        android:background="#FFF3E0"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/counterText"
+        app:layout_constraintBottom_toTopOf="@id/prevButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Кнопка "Предыдущее" -->
+    <Button
+        android:id="@+id/prevButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Предыдущее"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Кнопка "Следующее" -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Следующее"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
